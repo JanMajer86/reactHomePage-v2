@@ -120,8 +120,8 @@ button {
 	margin: 0 auto;
 	background: linear-gradient(
 			0deg,
-			rgb(var(--color-prim-dark), 0.6),
-			rgb(var(--color-prim-dark), 0.9)
+			rgb(var(--color-prim-dark), 0.9),
+			rgb(var(--color-prim-dark), 0.6)
 		),
 		url("./assets/images/hero.jpg") no-repeat top right;
 	background-attachment: fixed;
