@@ -37,6 +37,8 @@ html {
 
 	--color-white: #fff;
 	--color-black: #000;
+
+	--card-width: 78rem;
 }
 
 a {

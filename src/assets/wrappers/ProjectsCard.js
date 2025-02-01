@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-	--card-width: 78rem;
-
 	.projects-card {
 		width: var(--card-width);
 		height: 30rem;
