@@ -6,6 +6,7 @@ const Wrapper = styled.div`
 		height: 30rem;
 		border: 4px solid var(--color-primary);
 		display: flex;
+		/* transition: all 0.4s ease-out; */
 	}
 	.card--left {
 		border-right: 4px solid var(--color-primary);
@@ -13,6 +14,11 @@ const Wrapper = styled.div`
 		overflow: hidden;
 		position: relative;
 		display: inline-block;
+		transition: all 0.4s ease-out;
+	}
+
+	.more-info .card--left {
+		width: 38%;
 	}
 
 	.project-img {
@@ -55,18 +61,42 @@ const Wrapper = styled.div`
 		position: absolute;
 		top: 50%;
 		left: -2px;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%) rotate(0deg);
 		z-index: 20;
 		font-size: 4.8rem;
 		font-weight: 900;
 		color: var(--color-primary);
 		cursor: pointer;
+		transition: transform 0.4s ease-out;
+		box-sizing: content-box;
+		border-radius: 50%;
+	}
+
+	.card--right svg:hover {
+		border: 4px solid;
+		animation: pulsating-border 1s ease-in-out infinite;
+	}
+
+	.more-info .card--right svg {
+		transform: translate(-50%, -50%) rotate(180deg);
 	}
 
 	.stack-icon {
 		display: grid;
 		svg {
 			grid-area: 1/1;
+		}
+	}
+
+	@keyframes pulsating-border {
+		0% {
+			border-color: rgba(var(--color-prim), 1);
+		}
+		50% {
+			border-color: rgba(var(--color-prim), 0);
+		}
+		100% {
+			border-color: rgba(var(--color-prim), 1);
 		}
 	}
 `;
