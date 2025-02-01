@@ -6,7 +6,7 @@ const Wrapper = styled.div`
 		height: 30rem;
 		border: 4px solid var(--color-primary);
 		display: flex;
-		/* transition: all 0.4s ease-out; */
+		overflow-x: hidden;
 	}
 	.card--left {
 		border-right: 4px solid var(--color-primary);
@@ -55,6 +55,7 @@ const Wrapper = styled.div`
 	.card--right {
 		position: relative;
 		padding: 2rem;
+		flex-grow: 1;
 	}
 
 	.card--right svg {
@@ -90,14 +91,42 @@ const Wrapper = styled.div`
 
 	@keyframes pulsating-border {
 		0% {
-			border-color: rgba(var(--color-prim), 1);
-		}
-		50% {
 			border-color: rgba(var(--color-prim), 0);
 		}
-		100% {
+		50% {
 			border-color: rgba(var(--color-prim), 1);
 		}
+		100% {
+			border-color: rgba(var(--color-prim), 0);
+		}
+	}
+
+	.info-container {
+		display: flex;
+		position: relative;
+		width: 200%;
+	}
+	.info-basic {
+		width: 100%;
+		visibility: visible;
+		opacity: 1;
+		transition: all 0.5s ease-in;
+	}
+	.info-additional {
+		width: 100%;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.5s ease-in;
+	}
+
+	.more-info .info-basic {
+		width: 0%;
+		visibility: hidden;
+		opacity: 0;
+	}
+	.more-info .info-additional {
+		visibility: visible;
+		opacity: 1;
 	}
 `;
 

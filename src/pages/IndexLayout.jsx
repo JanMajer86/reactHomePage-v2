@@ -12,13 +12,13 @@ const IndexLayout = () => {
 				<Navbar />
 			</div>
 			<main className="section-main">
-				<div className="page-container">
+				<div className="page-container" id="home">
 					<Home />
 				</div>
-				<div className="page-container">
+				<div className="page-container" id="about">
 					<About />
 				</div>
-				<div className="page-container">
+				<div className="page-container" id="projects">
 					<Projects />
 				</div>
 			</main>
