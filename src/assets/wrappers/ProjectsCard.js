@@ -11,8 +11,8 @@ const Wrapper = styled.div`
 		overflow-x: hidden;
 	}
 	.card--left {
-		border-right: 4px solid var(--color-primary);
 		width: 62%;
+		border-right: 4px solid var(--color-primary);
 		overflow: hidden;
 		position: relative;
 		display: inline-block;
@@ -38,6 +38,13 @@ const Wrapper = styled.div`
 		bottom: 16px;
 		left: 50%;
 		transform: translateX(-50%);
+		transition: all 0.3s ease-out;
+	}
+
+	.more-info .card--left h3 {
+		bottom: -16px;
+		visibility: hidden;
+		opacity: 0;
 	}
 
 	.card--left::before {
@@ -59,8 +66,10 @@ const Wrapper = styled.div`
 		position: relative;
 		padding: 2rem;
 		flex-grow: 1;
-		border: 2px solid yellow;
+		/* border: 2px solid yellow; */
 	}
+
+	/* CHEVRON ICON */
 
 	.stack-icon svg {
 		position: absolute;
@@ -70,15 +79,21 @@ const Wrapper = styled.div`
 		z-index: 20;
 		font-size: 4.8rem;
 		font-weight: 900;
-		color: var(--color-primary);
 		cursor: pointer;
 		transition: transform 0.4s ease-out;
 		box-sizing: content-box;
 		border-radius: 50%;
 	}
 
-	.stack-icon svg:hover {
-		border: 4px solid;
+	.fa-circle {
+		color: var(--color-primary);
+	}
+	.fa-chevron {
+		color: var(--color-grey-light-1);
+	}
+
+	.fa-chevron:hover {
+		border: 6px solid;
 		animation: pulsating-border 1s ease-in-out infinite;
 	}
 
@@ -96,12 +111,15 @@ const Wrapper = styled.div`
 	@keyframes pulsating-border {
 		0% {
 			border-color: rgba(var(--color-prim), 0);
+			color: var(--color-grey-light-1);
 		}
 		50% {
 			border-color: rgba(var(--color-prim), 1);
+			color: var(--color-white);
 		}
 		100% {
 			border-color: rgba(var(--color-prim), 0);
+			color: var(--color-grey-light-1);
 		}
 	}
 
@@ -113,23 +131,22 @@ const Wrapper = styled.div`
 		top: 0;
 		left: 0;
 		bottom: 0;
-		border: 2px solid white;
 		transition: all 0.5s ease-in;
+		/* border: 2px solid white; */
 	}
 	.info-basic {
 		width: calc(var(--card-width) * 0.38);
 		padding: 2rem;
 		visibility: visible;
 		opacity: 1;
-		transition: all 0.5s ease-in;
+		transition: all 0.3s ease-in;
 	}
 	.info-add {
 		width: calc(var(--card-width) * 0.62);
 		padding: 2rem;
-
 		visibility: hidden;
 		opacity: 0;
-		transition: all 0.5s ease-in;
+		transition: all 0.3s ease-out;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -153,16 +170,41 @@ const Wrapper = styled.div`
 	.info-add--links {
 		width: 100%;
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 	}
 
 	.btn-project {
 		background-color: transparent;
+		border: 3px solid var(--color-grey-dark-2);
+		display: flex;
+		align-items: center;
+		border-radius: 6px;
 		color: var(--color-grey-light-1);
+		padding: 0.8rem 2rem;
 		font-size: large;
+		transition: all 0.2s ease-out;
+	}
+
+	.btn-project:hover {
+		border-color: var(--color-grey-light-2);
+		transform: translateY(-2px);
+		box-shadow: 0 2px 6px rgba(var(--color-prim), 0.4);
 	}
 
 	.btn-project svg {
+		font-size: 2.6rem;
+		margin-right: 1rem;
+		color: var(--color-grey-dark);
+		transition: all 0.2s ease-out;
+	}
+	.btn-project:hover svg {
+		font-size: 2.6rem;
+		margin-right: 1rem;
+		color: var(--color-primary-light-2);
+	}
+
+	.view {
+		margin-right: 3rem;
 	}
 `;
 

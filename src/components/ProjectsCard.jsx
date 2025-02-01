@@ -31,11 +31,8 @@ const ProjectsCard = ({
 				<div className="card--right">
 					{/* CHEVRON ICON */}
 					<div className="stack-icon" onClick={handleClick}>
-						<FaCircle />
-						<FaCircleChevronLeft
-							color="var(--color-grey-light-1)"
-							className="fa-circle"
-						/>
+						<FaCircle className="fa-circle" />
+						<FaCircleChevronLeft className="fa-chevron" />
 					</div>
 					{/* PROJECT INFO HERE */}
 					<div className="info-container">
@@ -46,7 +43,7 @@ const ProjectsCard = ({
 							<div className="info-add--links">
 								{/* site link */}
 								<a href={http} target="_blank">
-									<button className="btn-project">
+									<button className="btn-project view">
 										<TbWorldWww />
 										view project
 									</button>

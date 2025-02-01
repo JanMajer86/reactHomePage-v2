@@ -6,7 +6,6 @@ const Projects = () => {
 	console.log(project1);
 	return (
 		<>
-			{/* <ProjectsCard /> */}
 			<ProjectsCard {...project1} />
 		</>
 	);
