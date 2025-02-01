@@ -2,6 +2,8 @@ import Wrapper from "../assets/wrappers/ProjectsCard";
 import img1 from "./../assets/images/project1.jpg";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 import { FaCircle } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
+import { FaSquareGithub } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
 const ProjectsCard = ({
@@ -38,7 +40,26 @@ const ProjectsCard = ({
 					{/* PROJECT INFO HERE */}
 					<div className="info-container">
 						<div className="info-basic">{basicInfo}</div>
-						<div className="info-additional">{additionalInfo}</div>
+						<div className="info-add">
+							{additionalInfo}
+							{/* PROJECT LINKS */}
+							<div className="info-add--links">
+								{/* site link */}
+								<a href={http} target="_blank">
+									<button className="btn-project">
+										<TbWorldWww />
+										view project
+									</button>
+								</a>
+								{/* code link */}
+								<a href={gitHub} target="_blank">
+									<button className="btn-project">
+										<FaSquareGithub />
+										view code
+									</button>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

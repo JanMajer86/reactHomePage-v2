@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+	--card-width: 78rem;
+
 	.projects-card {
-		width: 78rem;
+		width: var(--card-width);
 		height: 30rem;
 		border: 4px solid var(--color-primary);
 		display: flex;
@@ -53,12 +55,14 @@ const Wrapper = styled.div`
 		);
 	}
 	.card--right {
+		display: flex;
 		position: relative;
 		padding: 2rem;
 		flex-grow: 1;
+		border: 2px solid yellow;
 	}
 
-	.card--right svg {
+	.stack-icon svg {
 		position: absolute;
 		top: 50%;
 		left: -2px;
@@ -73,12 +77,12 @@ const Wrapper = styled.div`
 		border-radius: 50%;
 	}
 
-	.card--right svg:hover {
+	.stack-icon svg:hover {
 		border: 4px solid;
 		animation: pulsating-border 1s ease-in-out infinite;
 	}
 
-	.more-info .card--right svg {
+	.more-info .stack-icon svg {
 		transform: translate(-50%, -50%) rotate(180deg);
 	}
 
@@ -101,32 +105,64 @@ const Wrapper = styled.div`
 		}
 	}
 
+	/* COLLAPSED */
+
 	.info-container {
 		display: flex;
-		position: relative;
-		width: 200%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		border: 2px solid white;
+		transition: all 0.5s ease-in;
 	}
 	.info-basic {
-		width: 100%;
+		width: calc(var(--card-width) * 0.38);
+		padding: 2rem;
 		visibility: visible;
 		opacity: 1;
 		transition: all 0.5s ease-in;
 	}
-	.info-additional {
-		width: 100%;
+	.info-add {
+		width: calc(var(--card-width) * 0.62);
+		padding: 2rem;
+
 		visibility: hidden;
 		opacity: 0;
 		transition: all 0.5s ease-in;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.more-info .info-container {
+		left: -62%;
 	}
 
 	.more-info .info-basic {
-		width: 0%;
 		visibility: hidden;
 		opacity: 0;
 	}
-	.more-info .info-additional {
+	.more-info .info-add {
 		visibility: visible;
 		opacity: 1;
+	}
+
+	/* LINKS */
+
+	.info-add--links {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.btn-project {
+		background-color: transparent;
+		color: var(--color-grey-light-1);
+		font-size: large;
+	}
+
+	.btn-project svg {
 	}
 `;
 
