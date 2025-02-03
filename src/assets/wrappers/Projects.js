@@ -57,14 +57,12 @@ const Wrapper = styled.div`
 		opacity: 1;
 	}
 	.tab-active {
-		color: var(--color-primary-dark-1);
 		font-weight: 800;
 		letter-spacing: 0.1rem;
 	}
 	.tab-active svg {
 		z-index: 10;
 		font-size: 2.4rem;
-		color: var(--color-grey-light-1);
 
 		stroke-width: 1.1;
 	}

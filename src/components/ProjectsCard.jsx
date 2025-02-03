@@ -37,13 +37,14 @@ const ProjectsCard = ({
 				<div className="card--left" style={{ "--img": `url(${img})` }}>
 					<h3>{name}</h3>
 				</div>
+				<div className="stack-icon" onClick={handleClick}>
+					<FaCircle className="fa-circle" />
+					<FaCircleChevronLeft className="fa-chevron" />
+				</div>
 
 				<div className="card--right">
 					{/* CHEVRON ICON */}
-					<div className="stack-icon" onClick={handleClick}>
-						<FaCircle className="fa-circle" />
-						<FaCircleChevronLeft className="fa-chevron" />
-					</div>
+
 					{/* PROJECT INFO HERE */}
 					<div className="info-container">
 						<div className="info-basic">{basicInfo}</div>

@@ -57,25 +57,12 @@ const Wrapper = styled.div`
 		opacity: 0;
 	}
 
-	/* .card--left::before {
-		content: "";
-		z-index: 10;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(
-			0deg,
-			rgba(var(--color-prim), 0.9) 0%,
-			rgba(var(--color-prim), 0.6) 50%
-		);
-	} */
 	.card--right {
 		display: flex;
 		position: relative;
 		padding: 2rem;
 		flex-grow: 1;
+		overflow: hidden;
 		/* background-color: var(--color-primary-dark-3); */
 	}
 
@@ -84,8 +71,7 @@ const Wrapper = styled.div`
 	.stack-icon svg {
 		position: absolute;
 		top: 50%;
-		left: -2px;
-		transform: translate(-50%, -50%) rotate(0deg);
+		transform: translate(-53%, -50%) rotate(0deg);
 		z-index: 20;
 		font-size: 4.8rem;
 		font-weight: 900;
@@ -108,7 +94,7 @@ const Wrapper = styled.div`
 	}
 
 	.more-info .stack-icon svg {
-		transform: translate(-50%, -50%) rotate(180deg);
+		transform: translate(-53%, -50%) rotate(180deg);
 	}
 
 	.stack-icon {
