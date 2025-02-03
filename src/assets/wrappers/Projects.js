@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+	/* TABS */
+
 	.tabs-container {
 		width: var(--card-width);
 		/* height: 4rem; */
@@ -70,6 +72,14 @@ const Wrapper = styled.div`
 		z-index: 10;
 
 		background-color: var(--color-secondary-dark-2);
+	}
+
+	.projects-container {
+		width: var(--card-width);
+		height: 30rem;
+		position: relative;
+		display: flex;
+		overflow: hidden;
 	}
 `;
 

@@ -13,6 +13,8 @@ const ProjectsCard = ({
 	additionalInfo,
 	http,
 	gitHub,
+	activeTab,
+	index,
 }) => {
 	const [moreInfo, setMoreInfo] = useState(false);
 
@@ -20,9 +22,18 @@ const ProjectsCard = ({
 		setMoreInfo(!moreInfo);
 	};
 
+	console.log(index);
+
 	return (
 		<Wrapper>
-			<div className={`projects-card ${moreInfo ? "more-info" : ""}`}>
+			<div
+				className={`projects-card ${moreInfo ? "more-info" : ""}`}
+				style={{
+					transform: `translateX(${(index - activeTab) * 100}%)`,
+					opacity: index === activeTab ? 1 : 0,
+					visibility: index === activeTab ? "visible" : "hidden",
+				}}
+			>
 				<div className="card--left" style={{ "--img": `url(${img})` }}>
 					<h3>{name}</h3>
 				</div>

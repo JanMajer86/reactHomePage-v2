@@ -3,12 +3,15 @@ import styled from "styled-components";
 const Wrapper = styled.div`
 	.projects-card {
 		width: var(--card-width);
+		position: absolute;
+
 		height: 30rem;
 		border: 4px solid var(--color-primary);
 		border-bottom-left-radius: var(--border-rad);
 		border-bottom-right-radius: var(--border-rad);
 		display: flex;
 		overflow: hidden;
+		transition: all 0.2s ease-in;
 	}
 	.card--left {
 		width: 62%;

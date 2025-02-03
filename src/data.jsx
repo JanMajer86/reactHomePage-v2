@@ -10,6 +10,8 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 // project images
 import imgProject1 from "./assets/images/project1.jpg";
+import imgProject2 from "./assets/images/project2.jpg";
+import imgProject3 from "./assets/images/project3.jpg";
 
 export const navbarLinks = [
 	{
@@ -57,18 +59,18 @@ export const projects = [
 		gitHub: "code link",
 	},
 	{
-		name: "project name2",
-		img: `img here`,
-		basicInfo: "basic info",
-		additionalInfo: "additional info",
+		name: "project 2 name",
+		img: imgProject2,
+		basicInfo: "project 2 basic info",
+		additionalInfo: "project 2 additional info",
 		http: "http link",
 		gitHub: "code link",
 	},
 	{
-		name: "project name3",
-		img: `img here`,
-		basicInfo: "basic info",
-		additionalInfo: "additional info",
+		name: "project 3 name",
+		img: imgProject3,
+		basicInfo: "project 3 basic info",
+		additionalInfo: "project 3 additional info",
 		http: "http link",
 		gitHub: "code link",
 	},
