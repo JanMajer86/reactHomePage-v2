@@ -21,6 +21,7 @@ html {
 	--color-primary-light-2: #9775aa;
 	--color-prim: 88, 42, 114;
 	--color-prim-dark: 38, 3, 57;
+	--color-prim-dark-2: 26, 13, 34;
 
 	--color-secondary: #aaaa39;
 	--color-second: 170, 170, 57;
@@ -39,6 +40,7 @@ html {
 	--color-black: #000;
 
 	--card-width: 78rem;
+	--border-rad: 1.6rem;
 }
 
 a {

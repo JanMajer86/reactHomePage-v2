@@ -5,13 +5,15 @@ const Wrapper = styled.div`
 		width: var(--card-width);
 		height: 30rem;
 		border: 4px solid var(--color-primary);
+		border-bottom-left-radius: var(--border-rad);
+		border-bottom-right-radius: var(--border-rad);
 		display: flex;
-		overflow-x: hidden;
+		overflow: hidden;
 	}
 	.card--left {
 		width: 62%;
 		border-right: 4px solid var(--color-primary);
-		overflow: hidden;
+		/* overflow: hidden; */
 		position: relative;
 		display: inline-block;
 		transition: all 0.4s ease-out;
@@ -64,7 +66,7 @@ const Wrapper = styled.div`
 		position: relative;
 		padding: 2rem;
 		flex-grow: 1;
-		/* border: 2px solid yellow; */
+		/* background-color: var(--color-primary-dark-3); */
 	}
 
 	/* CHEVRON ICON */
