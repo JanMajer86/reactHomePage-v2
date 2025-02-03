@@ -50,7 +50,7 @@ export const techStack = [
 export const projects = [
 	{
 		name: "project name",
-		img: { imgProject1 },
+		img: imgProject1,
 		basicInfo: "basic info",
 		additionalInfo: "additional info",
 		http: "http link",

@@ -16,6 +16,12 @@ const Wrapper = styled.div`
 		position: relative;
 		display: inline-block;
 		transition: all 0.4s ease-out;
+		background: linear-gradient(
+				0deg,
+				rgba(var(--color-prim), 0.9) 0%,
+				rgba(var(--color-prim), 0.6) 50%
+			),
+			var(--img);
 		background-position: top center;
 		background-size: cover;
 	}
