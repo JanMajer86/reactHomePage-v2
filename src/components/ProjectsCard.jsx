@@ -20,11 +20,16 @@ const ProjectsCard = ({
 		setMoreInfo(!moreInfo);
 	};
 
+	const background = `background: linear-gradient(
+		0deg,
+		rgba(var(--color-prim), 0.9) 0%,
+		rgba(var(--color-prim), 0.6) 50%
+	), url(${img1}) background-Position: top center background- size: cover`;
 	return (
 		<Wrapper>
 			<div className={`projects-card ${moreInfo ? "more-info" : ""}`}>
-				<div className="card--left">
-					<img className="project-img" src={img1} alt="alt text" />
+				<div className="card--left" style={`${background}`}>
+					{/* <img className="project-img" src={img1} alt="alt text" /> */}
 					<h3>{name}</h3>
 				</div>
 

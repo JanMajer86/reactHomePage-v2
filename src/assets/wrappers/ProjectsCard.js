@@ -13,23 +13,24 @@ const Wrapper = styled.div`
 	.card--left {
 		width: 62%;
 		border-right: 4px solid var(--color-primary);
-		/* overflow: hidden; */
 		position: relative;
 		display: inline-block;
 		transition: all 0.4s ease-out;
+		background-position: top center;
+		background-size: cover;
 	}
 
 	.more-info .card--left {
 		width: 38%;
 	}
 
-	.project-img {
+	/* .project-img {
 		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: center top;
-	}
+	} */
 
 	.card--left h3 {
 		position: absolute;
@@ -47,7 +48,7 @@ const Wrapper = styled.div`
 		opacity: 0;
 	}
 
-	.card--left::before {
+	/* .card--left::before {
 		content: "";
 		z-index: 10;
 		position: absolute;
@@ -60,7 +61,7 @@ const Wrapper = styled.div`
 			rgba(var(--color-prim), 0.9) 0%,
 			rgba(var(--color-prim), 0.6) 50%
 		);
-	}
+	} */
 	.card--right {
 		display: flex;
 		position: relative;
