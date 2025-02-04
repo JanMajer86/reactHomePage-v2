@@ -4,20 +4,15 @@ const Wrapper = styled.div`
 	.projects-card {
 		width: var(--card-width);
 		position: absolute;
-
 		height: 30rem;
-		border: 4px solid var(--color-primary);
-		border-bottom-left-radius: var(--border-rad);
-		border-bottom-right-radius: var(--border-rad);
 		display: flex;
-		overflow: hidden;
 		transition: all 0.2s ease-in;
 	}
 	.card--left {
 		width: 62%;
 		border-right: 4px solid var(--color-primary);
 		position: relative;
-		display: inline-block;
+		/* display: inline-block; */
 		transition: all 0.4s ease-out;
 		background: linear-gradient(
 				0deg,
@@ -32,14 +27,6 @@ const Wrapper = styled.div`
 	.more-info .card--left {
 		width: 38%;
 	}
-
-	/* .project-img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center top;
-	} */
 
 	.card--left h3 {
 		position: absolute;
@@ -63,22 +50,30 @@ const Wrapper = styled.div`
 		padding: 2rem;
 		flex-grow: 1;
 		overflow: hidden;
-		/* background-color: var(--color-primary-dark-3); */
+		background-color: rgba(var(--color-prim-dark-2), 0.3);
 	}
 
 	/* CHEVRON ICON */
+	.stack-icon {
+		display: grid;
+		svg {
+			grid-area: 1/1;
+		}
+	}
 
 	.stack-icon svg {
 		position: absolute;
 		top: 50%;
-		transform: translate(-53%, -50%) rotate(0deg);
+		left: calc(var(--card-width) * 0.618);
+		/* left: 0%; */
+		transform: translate(-50%, -50%) rotate(0deg);
 		z-index: 20;
 		font-size: 4.8rem;
 		font-weight: 900;
-		cursor: pointer;
-		transition: transform 0.4s ease-out;
 		box-sizing: content-box;
 		border-radius: 50%;
+		transition: all 0.4s ease-out;
+		cursor: pointer;
 	}
 
 	.fa-circle {
@@ -94,14 +89,8 @@ const Wrapper = styled.div`
 	}
 
 	.more-info .stack-icon svg {
-		transform: translate(-53%, -50%) rotate(180deg);
-	}
-
-	.stack-icon {
-		display: grid;
-		svg {
-			grid-area: 1/1;
-		}
+		left: calc(var(--card-width) * 0.378);
+		transform: translate(-50%, -50%) rotate(180deg);
 	}
 
 	@keyframes pulsating-border {
@@ -128,7 +117,6 @@ const Wrapper = styled.div`
 		left: 0;
 		bottom: 0;
 		transition: all 0.5s ease-in;
-		/* border: 2px solid white; */
 	}
 	.info-basic {
 		width: calc(var(--card-width) * 0.38);
@@ -199,7 +187,7 @@ const Wrapper = styled.div`
 		color: var(--color-primary-light-2);
 	}
 
-	.view {
+	.btn-project:first-of-type {
 		margin-right: 3rem;
 	}
 `;

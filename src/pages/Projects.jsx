@@ -43,7 +43,6 @@ const Projects = () => {
 					<span>project #3</span>
 				</div>
 			</div>
-			{/* TABS */}
 			{/* <ProjectsCard {...project1} /> */}
 			<div className="projects-container">
 				{projects.map((project, projectIndex) => {

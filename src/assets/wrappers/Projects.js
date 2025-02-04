@@ -78,6 +78,9 @@ const Wrapper = styled.div`
 		position: relative;
 		display: flex;
 		overflow: hidden;
+		border: 4px solid var(--color-primary);
+		border-bottom-left-radius: var(--border-rad);
+		border-bottom-right-radius: var(--border-rad);
 	}
 `;
 

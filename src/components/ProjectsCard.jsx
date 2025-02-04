@@ -37,14 +37,13 @@ const ProjectsCard = ({
 				<div className="card--left" style={{ "--img": `url(${img})` }}>
 					<h3>{name}</h3>
 				</div>
+				{/* CHEVRON ICON */}
 				<div className="stack-icon" onClick={handleClick}>
 					<FaCircle className="fa-circle" />
 					<FaCircleChevronLeft className="fa-chevron" />
 				</div>
 
 				<div className="card--right">
-					{/* CHEVRON ICON */}
-
 					{/* PROJECT INFO HERE */}
 					<div className="info-container">
 						<div className="info-basic">{basicInfo}</div>
@@ -54,7 +53,7 @@ const ProjectsCard = ({
 							<div className="info-add--links">
 								{/* site link */}
 								<a href={http} target="_blank">
-									<button className="btn-project view">
+									<button className="btn-project">
 										<TbWorldWww />
 										view project
 									</button>
