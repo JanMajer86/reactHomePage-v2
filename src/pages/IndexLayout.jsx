@@ -4,6 +4,7 @@ import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
 import Footer from "./../components/Footer";
+import HeroHeading from "../components/HeroHeading";
 
 const IndexLayout = () => {
 	return (
@@ -11,6 +12,9 @@ const IndexLayout = () => {
 			<div className="page-container">
 				<Navbar />
 			</div>
+			<header className="page-container page-header">
+				<HeroHeading />
+			</header>
 			<main className="section-main">
 				<div className="page-container" id="home">
 					<Home />

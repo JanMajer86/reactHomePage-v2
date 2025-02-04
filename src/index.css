@@ -39,6 +39,7 @@ html {
 	--color-white: #fff;
 	--color-black: #000;
 
+	--width: 130rem;
 	--card-width: 78rem;
 	--border-rad: 1.6rem;
 }
@@ -118,8 +119,7 @@ button {
 }
 
 .page-container {
-	/* height: calc(100vh - 8rem); */
-	max-width: 130rem;
+	max-width: var(--width);
 	padding: 3rem 4rem;
 	margin: 0 auto;
 	background: linear-gradient(
@@ -133,11 +133,19 @@ button {
 	border-radius: 2rem;
 	border: 2px solid var(--color-primary-light-2);
 	overflow: hidden;
-	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	margin-bottom: 4rem;
+}
+
+.page-header {
+	border: none;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+
+	/* background-attachment: scroll, local; */
 }
 
 /* * * * * * */
