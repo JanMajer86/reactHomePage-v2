@@ -12,16 +12,40 @@ const Wrapper = styled.div`
 		width: 62%;
 		border-right: 4px solid var(--color-primary);
 		position: relative;
-		/* display: inline-block; */
 		transition: all 0.4s ease-out;
-		background: linear-gradient(
-				0deg,
-				rgba(var(--color-prim), 0.9) 0%,
-				rgba(var(--color-prim), 0.6) 50%
-			),
-			var(--img);
+		background: var(--img);
 		background-position: top center;
 		background-size: cover;
+	}
+
+	.card--left::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 10;
+		background: linear-gradient(
+			-45deg,
+			rgba(var(--color-prim-dark), 0.6) 33%,
+			rgba(var(--color-prim), 0.8) 50%,
+			rgba(var(--color-prim-dark), 0.6) 67%
+		);
+		background-size: 400% 400%;
+		animation: gradient 12s ease infinite;
+	}
+
+	@keyframes gradient {
+		0% {
+			background-position: 0% 0%;
+		}
+		50% {
+			background-position: 50% 100%;
+		}
+		100% {
+			background-position: 0% 0%;
+		}
 	}
 
 	.more-info .card--left {
@@ -91,21 +115,6 @@ const Wrapper = styled.div`
 	.more-info .stack-icon svg {
 		left: calc(var(--card-width) * 0.378);
 		transform: translate(-50%, -50%) rotate(180deg);
-	}
-
-	@keyframes pulsating-border {
-		0% {
-			border-color: rgba(var(--color-prim), 0);
-			color: var(--color-grey-light-1);
-		}
-		50% {
-			border-color: rgba(var(--color-prim), 1);
-			color: var(--color-white);
-		}
-		100% {
-			border-color: rgba(var(--color-prim), 0);
-			color: var(--color-grey-light-1);
-		}
 	}
 
 	/* COLLAPSED */
@@ -189,6 +198,23 @@ const Wrapper = styled.div`
 
 	.btn-project:first-of-type {
 		margin-right: 3rem;
+	}
+
+	/* ANIMATIONS */
+
+	@keyframes pulsating-border {
+		0% {
+			border-color: rgba(var(--color-prim), 0);
+			color: var(--color-grey-light-1);
+		}
+		50% {
+			border-color: rgba(var(--color-prim), 1);
+			color: var(--color-white);
+		}
+		100% {
+			border-color: rgba(var(--color-prim), 0);
+			color: var(--color-grey-light-1);
+		}
 	}
 `;
 

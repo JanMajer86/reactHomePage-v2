@@ -25,6 +25,7 @@ const Projects = () => {
 							className={`tab ${activeTab === index ? "tab-active" : ""}`}
 							onClick={handleSetActiveTab}
 							key={index}
+							style={{ flexBasis: `${100 / projects.length}%` }}
 						>
 							<GoProjectRoadmap />
 							<span>project #{index + 1}</span>

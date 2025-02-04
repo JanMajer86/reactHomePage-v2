@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
 	/* TABS */
-
 	.tabs-container {
 		width: var(--card-width);
 		display: flex;
@@ -14,12 +13,10 @@ const Wrapper = styled.div`
 	}
 	.tab {
 		position: relative;
-		flex-basis: 33.34%;
 		padding: 0.8rem 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		/* background: var(--color-primary-dark-2); */
 		background: linear-gradient(
 			rgba(var(--color-prim), 0.3),
 			rgba(var(--color-prim-dark-2), 0.7)
@@ -36,7 +33,6 @@ const Wrapper = styled.div`
 	.tab svg {
 		margin-right: 0.8rem;
 		font-size: 2rem;
-		transition: all 0.5s ease-out;
 	}
 	.tab:after {
 		content: "";
@@ -56,7 +52,7 @@ const Wrapper = styled.div`
 		opacity: 1;
 	}
 	.tab-active {
-		font-weight: 800;
+		font-weight: 600;
 		letter-spacing: 0.1rem;
 	}
 	.tab-active svg {
@@ -70,6 +66,8 @@ const Wrapper = styled.div`
 
 		background-color: var(--color-secondary-dark-2);
 	}
+
+	/* PROJECTS */
 
 	.projects-container {
 		width: var(--card-width);
