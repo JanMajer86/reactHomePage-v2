@@ -5,7 +5,6 @@ const Wrapper = styled.div`
 
 	.tabs-container {
 		width: var(--card-width);
-		/* height: 4rem; */
 		display: flex;
 		border: 4px solid var(--color-primary);
 		border-top-left-radius: var(--border-rad);

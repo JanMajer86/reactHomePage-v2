@@ -22,8 +22,6 @@ const ProjectsCard = ({
 		setMoreInfo(!moreInfo);
 	};
 
-	console.log(index);
-
 	return (
 		<Wrapper>
 			<div

@@ -1,8 +1,10 @@
+import { useState } from "react";
+import { GoProjectRoadmap } from "react-icons/go";
+
 import { projects } from "../data";
+
 import ProjectsCard from "../components/ProjectsCard";
 import Wrapper from "../assets/wrappers/Projects";
-import { GoProjectRoadmap } from "react-icons/go";
-import { useState } from "react";
 
 const Projects = () => {
 	const [activeTab, setActiveTab] = useState(0);
@@ -12,38 +14,25 @@ const Projects = () => {
 		setActiveTab(newActive);
 	};
 
-	const project1 = projects[0];
-
 	return (
 		<Wrapper>
 			{/* TABS */}
 			<div className="tabs-container">
-				<div
-					data-value={0}
-					className={`tab ${activeTab === 0 ? "tab-active" : ""}`}
-					onClick={handleSetActiveTab}
-				>
-					<GoProjectRoadmap />
-					<span>project #1</span>
-				</div>
-				<div
-					data-value={1}
-					className={`tab ${activeTab === 1 ? "tab-active" : ""}`}
-					onClick={handleSetActiveTab}
-				>
-					<GoProjectRoadmap />
-					<span>project #2</span>
-				</div>
-				<div
-					data-value={2}
-					className={`tab ${activeTab === 2 ? "tab-active" : ""}`}
-					onClick={handleSetActiveTab}
-				>
-					<GoProjectRoadmap />
-					<span>project #3</span>
-				</div>
+				{projects.map((project, index) => {
+					return (
+						<div
+							data-value={index}
+							className={`tab ${activeTab === index ? "tab-active" : ""}`}
+							onClick={handleSetActiveTab}
+							key={index}
+						>
+							<GoProjectRoadmap />
+							<span>project #{index + 1}</span>
+						</div>
+					);
+				})}
 			</div>
-			{/* <ProjectsCard {...project1} /> */}
+			{/* PROJECTS-CARD */}
 			<div className="projects-container">
 				{projects.map((project, projectIndex) => {
 					return (
@@ -51,6 +40,7 @@ const Projects = () => {
 							{...project}
 							activeTab={activeTab}
 							index={projectIndex}
+							key={projectIndex}
 						/>
 					);
 				})}
